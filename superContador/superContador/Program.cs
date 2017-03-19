@@ -30,6 +30,7 @@ namespace superContador
                 {
                     Console.WriteLine("SAINDO...");
                     break;
+                    
                 }
 
                 if (escolha == 1)
@@ -57,7 +58,7 @@ namespace superContador
 
 
 
-        Console.ReadLine();
+        
         }
     }
 }
