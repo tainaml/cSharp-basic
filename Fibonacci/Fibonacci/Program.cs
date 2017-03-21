@@ -19,7 +19,7 @@ namespace Fibonacci
             Console.WriteLine("0");
             Console.WriteLine("1");
 
-            for (i = 0; i < n; i++)
+            for (i = 0; i < n-2; i++)
             {
                                 
                 proximo = anterior + atual;
