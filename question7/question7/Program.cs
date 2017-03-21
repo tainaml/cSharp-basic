@@ -13,28 +13,44 @@ namespace question7
     {
         static void Main(string[] args)
         {
-            int num1,num2;
-            Console.WriteLine("digite o primeiro numero: ");
-            num1 = Convert.ToInt16(Console.ReadLine());
+            int i,n, proximo = 1, atual, anterior=0;
 
-            Console.WriteLine("digite o segundo numero: ");
-            num2 = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Digite um numero: ");
+            n = Convert.ToInt16(Console.ReadLine());
 
-            int soma = num1 + num2;
-            int sub = num1 - num2;
-            int mult = num1 * num2;
-            int div = num1 / num2;
-            int resto = num1 % 4;
-            Console.WriteLine($"{num1} + {num2} = {soma}");
-            Console.WriteLine($"{num1} - {num2} = {sub}");
-            Console.WriteLine($"{num1} * {num2} = {mult}");
-            Console.WriteLine($"{num1} / {num2} = {div}");
-            Console.WriteLine($"{num1} mod {num2} = {resto}");
+            for (i = 0; i < n; i++)
+            {
+                if (i == 0)
+                {                    
+                    Console.WriteLine("0");
+                }
+                else if (i == 1)
+                {
+                    atual = proximo;
 
+                    Console.WriteLine(atual);
+
+                    proximo = proximo + anterior;
+
+                    Console.WriteLine(proximo);
+
+                    anterior = atual;
+                }
+                else
+                {
+                    atual = proximo;
+
+                    proximo = proximo + anterior;
+
+                    Console.WriteLine(proximo);
+
+                    anterior = atual;
+                }
+            }
+
+            
             Console.ReadLine();
-
-
-
+            
         }
     }
 }
